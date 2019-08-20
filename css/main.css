@@ -1,0 +1,85 @@
+﻿@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+
+.fa-arrow-right, .fa-arrow-left {
+    font-size: 40pt;
+    color: white;
+    line-height: 10vh;
+}
+
+header {
+    background-color: #407F7F;
+    color: white;
+    height: 10vh;
+}
+
+main {
+    min-height: 80vh;
+}
+
+#btnRetake {
+    visibility: hidden;
+}
+
+#btnSubmit, #btnRetake {
+    display: block;
+    margin: auto;
+}
+
+#cardResults {
+    visibility: hidden;
+}
+
+.btn-primary {
+    background-color: #407F7F;
+}
+
+    .btn-primary:active, .btn-primary:hover, .btn-primary:visited {
+        background-color: #0D4D4D !important;
+    }
+
+.btn-outline-primary {
+    border: 1px solid #407F7F;
+    color: #0D4D4D;
+}
+
+    .btn-outline-primary:hover, .btn-outline-primary:active, .btn-outline-primary:visited {
+        background-color: #407F7F !important;
+        color: white !important;
+    }
+
+.pagination > .active > a {
+    color: white;
+    background-color: #407F7F !Important;
+    border: solid 1px #407F7F !Important;
+}
+
+.pagination-container {
+    text-align: center;
+}
+
+.clear {
+    clear: both;
+}
+
+#error {
+    font-weight: bold;
+    color: red;
+}
+
+.pagination-lg li a {
+    color: #407F7F;
+}
+
+#customPagination h1 {
+    line-height: 10vh;
+}
+
+footer {
+    height: 10vh;
+    background-color: #0D4D4D;
+    color: white;
+}
+
+    footer .col-12 {
+        line-height: 10vh;
+    }
