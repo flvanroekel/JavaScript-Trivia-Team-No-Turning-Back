@@ -26,88 +26,88 @@ var score;
 var questions = {
   Question1: {
     multipleChoice: {
-      question: "This is question 1",
-      a: "multiple choice 1",
-      b: "multiple choice 2",
-      c: "multiple choice 3",
-      d: "multiple choice 4"
+      question: "In an HTML document, where does the JavaScript code go?",
+      a: "<script>",
+      b: "js",
+      c: "javascript",
+      d: "<scripting>"
     },
     userAnswer: ko.observable(""),
     correctAnswer: "a"
   },
   Question2: {
     multipleChoice: {
-      question: "This is question 2",
-      a: "multiple choice 1",
-      b: "multiple choice 2",
-      c: "multiple choice 3",
-      d: "multiple choice 4"
+      question: "What section of an HTML document does JavaScipt belong inside?",
+      a: "<head>",
+      b: "<footer>",
+      c: "<title>",
+      d: "None"
     },
     userAnswer: ko.observable(""),
     correctAnswer: "a"
   },
   Question3: {
     multipleChoice: {
-      question: "This is question 3",
-      a: "multiple choice 1",
-      b: "multiple choice 2",
-      c: "multiple choice 3",
-      d: "multiple choice 4"
+      question: "What is the proper format for creating a function?",
+      a: "MyFunctional = myFunction()",
+      b: "myFunction = function()",
+      c: "Function myFunction()",
+      d: "All are correct"
     },
     userAnswer: ko.observable(""),
     correctAnswer: "c"
   },
   Question4: {
     multipleChoice: {
-      question: "This is question 4",
-      a: "multiple choice 1",
-      b: "multiple choice 2",
-      c: "multiple choice 3",
-      d: "multiple choice 4"
+      question: "What is the correct format for an array?",
+      a: "Var groceries = [apple, orange, banana, pear]",
+      b: "Var groceries = [“apple”, “orange”, “banana”, “pear”]",
+      c: "Var groceries: [“apple, orange, banana, pear]",
+      d: "Var groceries: = (apple, orange, banana, pear)"
     },
     userAnswer: ko.observable(""),
     correctAnswer: "b"
   },
   Question5: {
     multipleChoice: {
-      question: "This is question 5",
-      a: "multiple choice 1",
-      b: "multiple choice 2",
-      c: "multiple choice 3",
-      d: "multiple choice 4"
+      question: "Which event happens when a user clicks on an HTML element?",
+      a: "Onclick",
+      b: "Onchange",
+      c: "Onmouseover",
+      d: "Onmouseclick"
     },
     userAnswer: ko.observable(""),
     correctAnswer: "a"
   },
   Question6: {
     multipleChoice: {
-      question: "This is question 6",
-      a: "multiple choice 1",
-      b: "multiple choice 2",
-      c: "multiple choice 3",
-      d: "multiple choice 4"
+      question: "How is a JavaScript variable declared?",
+      a: "Variable myvariable = ",
+      b: "Variable myVariable",
+      c: "V myVariable =",
+      d: "Var myVariable ="
     },
     userAnswer: ko.observable(""),
     correctAnswer: "d"
   },
   Question7: {
     multipleChoice: {
-      question: "This is question 7",
-      a: "multiple choice 1",
-      b: "multiple choice 2",
-      c: "multiple choice 3",
-      d: "multiple choice 4"
+      question: "How do you properly output a string element in JavaScript?",
+      a: "console.log(“Hello World!')",
+      b: "console.log(“Hello” + “ World!)",
+      c: "console.log(Hello World!)",
+      d: "console.log(“Hello + World”)"
     },
     userAnswer: ko.observable(""),
     correctAnswer: "a"
   },
   Question8: {
     multipleChoice: {
-      question: "This is question 8",
-      a: "multiple choice 1",
-      b: "multiple choice 2",
-      c: "multiple choice 3",
-      d: "multiple choice 4"
+      question: "How do you write an IF statement in JavaScript?",
+      a: "If i = A then",
+      b: "If (i === A)",
+      c: "If I = A",
+      d: "If i === A then"
     }
       ,
     userAnswer: ko.observable(""),
@@ -115,22 +115,22 @@ var questions = {
   },
   Question9: {
     multipleChoice: {
-      question: "This is question 9",
-      a: "multiple choice 1",
-      b: "multiple choice 2",
-      c: "multiple choice 3",
-      d: "multiple choice 4"
+      question: "How is a For loop written using JavaScript?",
+      a: "For (x = 0; x < loop.length; x++)",
+      b: "For (x=0, x < loop.length, x)",
+      c: "For (x = 0, x < loop.length = x++)",
+      d: "For (x < 0; x = loop.length; x--)"
     },
     userAnswer: ko.observable(""),
     correctAnswer: "a"
   },
   Question10: {
     multipleChoice: {
-      question: "This is question 10",
-      a: "multiple choice 1",
-      b: "multiple choice 2",
-      c: "multiple choice 3",
-      d: "multiple choice 4"
+      question: "What is the correct syntax for creating an alert box?",
+      a: "alertBox(“Important Message!);",
+      b: "msgBox(“Important Message!);",
+      c: "alert(“Important Message!”);",
+      d: "box(“Important Message!);"
     },
     userAnswer: ko.observable(""),
     correctAnswer: "c"
