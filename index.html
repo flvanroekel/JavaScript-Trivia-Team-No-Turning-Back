@@ -1,0 +1,192 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Javascript Trivia</title>
+    <meta name="description" content="Javascript Trivia">
+    <meta name="keywords" content="Javascript,Trivia">
+    <meta name="authors" content="Faye Van Roekel, Brittany Dockter, Ernie Phillips">
+    <meta http-equiv="x-ua-compatible" content="IE=EDGE, IE=11, IE=10">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <!--Stylesheets-->
+    <link href="css/bootstrap-4.3.1.css" rel="stylesheet" />
+    <link href="css/main.css" rel="stylesheet" />
+
+    <!--Scripts-->
+    <script src="js/jquery-3.4.1.js"></script>
+    <script src="js/bootstrap-4.3.1.js"></script>
+    <script src="js/knockout-3.5.0.js"></script>
+    <script src="js/pagination.js"></script>
+
+</head>
+<body>
+    <header class="container-fluid">
+        <div class="container" id="customPagination">
+            <div class="row">
+                <div class="col-12">
+                    <h1 class="text-center">Quiz</h1>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <div class="row h-50">
+                <div class="col-12" >
+                    <div id="results">
+                        <div class="card mt-5" id="cardResults">
+                            <div class="card-header">
+                                <h5 id="lblScore" data-bind="text: score"></h5>
+                                <h6 data-bind="text: rank"></h6>
+                            </div>
+                            <ul class="list-group list-group-flush" data-bind="foreach: qaya">
+                                <li class="list-group-item">
+                                    <span data-bind="text: question"></span><br />
+                                    <span data-bind="text: correctAnswer"></span><br />
+                                    <span data-bind="text: yourAnswer"></span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="pagination-container" id="QandA">
+                        <ul class="pagination pagination-lg justify-content-center">
+                            <li class="page-item" data-page="-"><a class="page-link" href="#">Previous</a></li>
+                            <li class="page-item" data-page="1"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item" data-page="2"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item" data-page="3"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item" data-page="4"><a class="page-link" href="#">4</a></li>
+                            <li class="page-item" data-page="5"><a class="page-link" href="#">5</a></li>
+                            <li class="page-item" data-page="6"><a class="page-link" href="#">6</a></li>
+                            <li class="page-item" data-page="7"><a class="page-link" href="#">7</a></li>
+                            <li class="page-item" data-page="8"><a class="page-link" href="#">8</a></li>
+                            <li class="page-item" data-page="9"><a class="page-link" href="#">9</a></li>
+                            <li class="page-item" data-page="10"><a class="page-link" href="#">10</a></li>
+                            <li class="page-item" data-page="11"><a class="page-link" href="#">11</a></li>
+                            <li class="page-item" data-page="+"><a class="page-link" href="#">Next</a></li>
+                        </ul>
+                        <hr />
+                        <div data-page="1">
+                            <h4 data-bind="text: Question1.multipleChoice.question"></h4>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="Question1" data-bind="checked: Question1.userAnswer" value="a"> <span data-bind="text: Question1.multipleChoice.a"></span><br />
+                                <input class="form-check-input" type="radio" name="Question1" data-bind="checked: Question1.userAnswer" value="b"> <span data-bind="text: Question1.multipleChoice.b"></span><br />
+                                <input class="form-check-input" type="radio" name="Question1" data-bind="checked: Question1.userAnswer" value="c"> <span data-bind="text: Question1.multipleChoice.c"></span><br />
+                                <input class="form-check-input" type="radio" name="Question1" data-bind="checked: Question1.userAnswer" value="d"> <span data-bind="text: Question1.multipleChoice.d"></span><br />
+                            </div>
+                        </div>
+                        <div data-page="2" style="display:none;">
+                            <h4 data-bind="text: Question2.multipleChoice.question"></h4>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="Question2" data-bind="checked: Question2.userAnswer" value="a"> <span data-bind="text: Question2.multipleChoice.a"></span><br />
+                                <input class="form-check-input" type="radio" name="Question2" data-bind="checked: Question2.userAnswer" value="b"> <span data-bind="text: Question2.multipleChoice.b"></span><br />
+                                <input class="form-check-input" type="radio" name="Question2" data-bind="checked: Question2.userAnswer" value="c"> <span data-bind="text: Question2.multipleChoice.c"></span><br />
+                                <input class="form-check-input" type="radio" name="Question2" data-bind="checked: Question2.userAnswer" value="d"> <span data-bind="text: Question2.multipleChoice.d"></span><br />
+                            </div>
+                        </div>
+                        <div data-page="3" style="display:none;">
+                            <h4 data-bind="text: Question3.multipleChoice.question"></h4>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="Question3" data-bind="checked: Question3.userAnswer" value="a"> <span data-bind="text: Question3.multipleChoice.a"></span><br />
+                                <input class="form-check-input" type="radio" name="Question3" data-bind="checked: Question3.userAnswer" value="b"> <span data-bind="text: Question3.multipleChoice.b"></span><br />
+                                <input class="form-check-input" type="radio" name="Question3" data-bind="checked: Question3.userAnswer" value="c"> <span data-bind="text: Question3.multipleChoice.c"></span><br />
+                                <input class="form-check-input" type="radio" name="Question3" data-bind="checked: Question3.userAnswer" value="d"> <span data-bind="text: Question3.multipleChoice.d"></span><br />
+                            </div>
+                        </div>
+                        <div data-page="4" style="display:none;">
+                            <h4 data-bind="text: Question4.multipleChoice.question"></h4>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="Question4" data-bind="checked: Question4.userAnswer" value="a"> <span data-bind="text: Question4.multipleChoice.a"></span><br />
+                                <input class="form-check-input" type="radio" name="Question4" data-bind="checked: Question4.userAnswer" value="b"> <span data-bind="text: Question4.multipleChoice.b"></span><br />
+                                <input class="form-check-input" type="radio" name="Question4" data-bind="checked: Question4.userAnswer" value="c"> <span data-bind="text: Question4.multipleChoice.c"></span><br />
+                                <input class="form-check-input" type="radio" name="Question4" data-bind="checked: Question4.userAnswer" value="d"> <span data-bind="text: Question4.multipleChoice.d"></span><br />
+                            </div>
+                        </div>
+                        <div data-page="5" style="display:none;">
+                            <h4 data-bind="text: Question5.multipleChoice.question"></h4>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="Question5" data-bind="checked: Question5.userAnswer" value="a"> <span data-bind="text: Question5.multipleChoice.a"></span><br />
+                                <input class="form-check-input" type="radio" name="Question5" data-bind="checked: Question5.userAnswer" value="b"> <span data-bind="text: Question5.multipleChoice.b"></span><br />
+                                <input class="form-check-input" type="radio" name="Question5" data-bind="checked: Question5.userAnswer" value="c"> <span data-bind="text: Question5.multipleChoice.c"></span><br />
+                                <input class="form-check-input" type="radio" name="Question5" data-bind="checked: Question5.userAnswer" value="d"> <span data-bind="text: Question5.multipleChoice.d"></span><br />
+                            </div>
+                        </div>
+                        <div data-page="6" style="display:none;">
+                            <h4 data-bind="text: Question6.multipleChoice.question"></h4>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="Question6" data-bind="checked: Question6.userAnswer" value="a"> <span data-bind="text: Question6.multipleChoice.a"></span><br />
+                                <input class="form-check-input" type="radio" name="Question6" data-bind="checked: Question6.userAnswer" value="b"> <span data-bind="text: Question6.multipleChoice.b"></span><br />
+                                <input class="form-check-input" type="radio" name="Question6" data-bind="checked: Question6.userAnswer" value="c"> <span data-bind="text: Question6.multipleChoice.c"></span><br />
+                                <input class="form-check-input" type="radio" name="Question6" data-bind="checked: Question6.userAnswer" value="d"> <span data-bind="text: Question6.multipleChoice.d"></span><br />
+                            </div>
+                        </div>
+                        <div data-page="7" style="display:none;">
+                            <h4 data-bind="text: Question7.multipleChoice.question"></h4>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="Question7" data-bind="checked: Question7.userAnswer" value="a"> <span data-bind="text: Question7.multipleChoice.a"></span><br />
+                                <input class="form-check-input" type="radio" name="Question7" data-bind="checked: Question7.userAnswer" value="b"> <span data-bind="text: Question7.multipleChoice.b"></span><br />
+                                <input class="form-check-input" type="radio" name="Question7" data-bind="checked: Question7.userAnswer" value="c"> <span data-bind="text: Question7.multipleChoice.c"></span><br />
+                                <input class="form-check-input" type="radio" name="Question7" data-bind="checked: Question7.userAnswer" value="d"> <span data-bind="text: Question7.multipleChoice.d"></span><br />
+                            </div>
+                        </div>
+                        <div data-page="8" style="display:none;">
+                            <h4 data-bind="text: Question8.multipleChoice.question"></h4>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="Question8" data-bind="checked: Question8.userAnswer" value="a"> <span data-bind="text: Question8.multipleChoice.a"></span><br />
+                                <input class="form-check-input" type="radio" name="Question8" data-bind="checked: Question8.userAnswer" value="b"> <span data-bind="text: Question8.multipleChoice.b"></span><br />
+                                <input class="form-check-input" type="radio" name="Question8" data-bind="checked: Question8.userAnswer" value="c"> <span data-bind="text: Question8.multipleChoice.c"></span><br />
+                                <input class="form-check-input" type="radio" name="Question8" data-bind="checked: Question8.userAnswer" value="d"> <span data-bind="text: Question8.multipleChoice.d"></span><br />
+                            </div>
+                        </div>
+                        <div data-page="9" style="display:none;">
+                            <h4 data-bind="text: Question9.multipleChoice.question"></h4>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="Question9" data-bind="checked: Question9.userAnswer" value="a"> <span data-bind="text: Question9.multipleChoice.a"></span><br />
+                                <input class="form-check-input" type="radio" name="Question9" data-bind="checked: Question9.userAnswer" value="b"> <span data-bind="text: Question9.multipleChoice.b"></span><br />
+                                <input class="form-check-input" type="radio" name="Question9" data-bind="checked: Question9.userAnswer" value="c"> <span data-bind="text: Question9.multipleChoice.c"></span><br />
+                                <input class="form-check-input" type="radio" name="Question9" data-bind="checked: Question9.userAnswer" value="d"> <span data-bind="text: Question9.multipleChoice.d"></span><br />
+                            </div>
+                        </div>
+                        <div data-page="10" style="display:none;">
+                            <h4 data-bind="text: Question10.multipleChoice.question"></h4>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="Question10" data-bind="checked: Question10.userAnswer" value="a"> <span data-bind="text: Question10.multipleChoice.a"></span><br />
+                                <input class="form-check-input" type="radio" name="Question10" data-bind="checked: Question10.userAnswer" value="b"> <span data-bind="text: Question10.multipleChoice.b"></span><br />
+                                <input class="form-check-input" type="radio" name="Question10" data-bind="checked: Question10.userAnswer" value="c"> <span data-bind="text: Question10.multipleChoice.c"></span><br />
+                                <input class="form-check-input" type="radio" name="Question10" data-bind="checked: Question10.userAnswer" value="d"> <span data-bind="text: Question10.multipleChoice.d"></span><br />
+                            </div>
+                        </div>
+                        <div data-page="11" style="display:none;">
+                            <button class="btn btn-lg btn-primary" id="btnSubmit">Submit Answers</button>
+                            <button class="btn btn-lg btn-outline-primary" id="btnRetake">Retake Quiz</button>
+                        </div>
+                        <label id="error"></label>
+                        <hr class="clear" />
+                        <div class="row">
+                            <div class="col-6">
+                                <a href="#" id="aBack" class="btn btn-lg btn-primary float-right">
+                                    Previous Question
+                                </a>
+                            </div>
+                            <div class="col-6">
+                                <a href="#" id="aNext" class="btn btn-lg btn-primary float-left">
+                                    Next Question
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="container-fluid">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <!--Class Project by Faye Van Roekel, Brittany Dockter, & Ernie Phillips-->
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+</html>
